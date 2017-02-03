@@ -1,0 +1,54 @@
+<html ng-app="myApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+         <!--Controllers-->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div ng-controller="MenuController as mv">
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab ng-click="mv.changeTab('quem-sou-eu')" label="Quem sou eu">
+
+                    </md-tab>
+                    <md-tab ng-click="mv.changeTab('projetos')" label="Projetos">
+                    </md-tab>
+
+                    <md-tab ng-click="mv.changeTab('experiencia')" label="Experiência">
+                    </md-tab>
+                    <md-tab ng-click="mv.changeTab('contato')" label="Contato">
+                    </md-tab>
+                </md-tabs>
+            </md-content>
+        </div>
+        <ui-view></ui-view>
+
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+
+        <!-- Libs-->
+        <script src="libs/angular-ui-router.min.js"></script>
+
+        <script src="module.js"></script>
+        <script src="routes.js"></script>
+
+        <script src="controllers/menu-controller.js"></script>
+        <script src="controllers/cards-controller.js"></script>
+        <script src="controllers/experiencias-controller.js"></script>
+        <script src="controllers/projetos-controller.js"></script>
+        <script src="controllers/alerts-experiencia-controller.js"></script>
+
+    </body>
+</html>
+

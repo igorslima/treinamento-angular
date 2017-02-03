@@ -1,0 +1,19 @@
+<md-content class="md-padding">
+<h1 class="titulo">Experiência</h1>
+<div class="md-padding" id="popupContainer" ng-cloak>
+        <div ng-repeat="experiencia in mv.experiencias">
+            <div class="dialog-demo-content" layout="row" layout-wrap layout-margin layout-align="row">
+                <md-button class="md-primary md-raised" ng-click="mv.showDetalhes(experiencia)"  >
+                    {{experiencia.nome}}
+                </md-button>
+            </div>
+        </div>
+
+    <div ng-if="status" id="status">
+        <b layout="row" layout-align="center center" class="md-padding">
+            {{status}}
+        </b>
+    </div>
+</div>
+
+</md-content>

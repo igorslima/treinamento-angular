@@ -1,0 +1,29 @@
+<md-content class="md-padding">
+    <h1 class="titulo">Projetos</h1>
+
+    <div ng-controller="CardsController" ng-cloak >
+        <div ng-controller="projetosController as mv">
+            <div ng-repeat="projeto in mv.projetos">
+            <md-content class="md-padding" layout-xs="row" layout="row">
+                <div flex-xs flex-gt-xs="100" layout="column">
+                    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">{{projeto.nome}}</span>
+                                <span class="md-subhead">{{projeto.descricao}}</span>
+                            </md-card-title-text>
+                            <md-card-title-media>
+                                <div class="md-media-lg card-media">
+                                    <img src="img/{{projeto.img}}" class="md-media-lg card-media fs-img"data-width=320 data-height="212">
+                                </div>
+                            </md-card-title-media>
+                        </md-card-title>
+                        <md-card-actions layout="row" layout-align="end center" class="lowercase">
+                            <md-button class="lowercase"><a target="_blank" href={{projeto.link}}  class="lowercase">Ir para o GitHub</a></md-button>
+                        </md-card-actions>
+                    </md-card>
+                </div>
+            </md-content>
+        </div>
+    </div>
+</md-content>
